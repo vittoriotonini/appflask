@@ -8,7 +8,7 @@ app = Flask(__name__)
 CORS(app)
 
 # URL del file JSON ospitato su Netlify
-json_url = 'https://fanciful-puffpuff-138927.netlify.app'
+json_url = 'https://fanciful-puffpuff-138927.netlify.app/catasto_chronicles_full.json'
 
 # Carica i dati JSON dal file remoto (Netlify)
 try:
