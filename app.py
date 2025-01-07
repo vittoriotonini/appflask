@@ -346,6 +346,7 @@ def search_family():
         return error_response("Nessun record trovato", 404)
 
     return jsonify(matching_records)
-
+    
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Usa la porta dinamica di Render (5000 per il test locale)
+    app.run(host='0.0.0.0', port=port, debug=True)  # 0.0.0.0 permette l'accesso esterno
